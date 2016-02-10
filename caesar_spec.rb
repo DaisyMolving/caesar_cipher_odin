@@ -67,6 +67,11 @@ describe Caesar do
 	 expect(result).to eq ["i", "q", "q", "f", nil, "d", "q", "q", "m"]
   end
 
+  it 'should allow spaces to remain unchanged in translation' do
+	 string = Caesar.new
+	 result = string.translate_to_string("good book", 2)
+	 expect(result).to eq "iqqf dqqm"
+  end
 
 
 
