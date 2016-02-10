@@ -49,6 +49,11 @@ describe Caesar do
 	 expect(result).to eq ["d", "q", "q", "m"]
   end
 
+  it 'should join array of letters to make a string' do
+	 string = Caesar.new
+	 result = string.translate_to_string("book", 5)
+	 expect(result).to eq "gttp"
+  end
 
 
 
