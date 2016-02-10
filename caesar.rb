@@ -1,5 +1,13 @@
 class Caesar
 
+  def shift_indices(input_string, shift_number)
+	 indices = find_indices(input_string)
+	 new_indices = []
+	 indices.each do |index|
+		new_indices << index += shift_number
+	 end
+	 new_indices
+  end
   
   def find_indices(input_string)
 	 letters = split_input(input_string)
