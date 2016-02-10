@@ -43,6 +43,25 @@ describe Caesar do
 	 expect(result).to eq ["j", "r", "r", "g"]
   end
 
+  it 'should take the index positions [3, 16, 16, 12] and return ["d", "q", "q", "m"]' do
+	 string = Caesar.new
+	 result = string.convert_letters("book", 2)
+	 expect(result).to eq ["d", "q", "q", "m"]
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
