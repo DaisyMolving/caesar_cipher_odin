@@ -68,6 +68,11 @@ describe Caesar do
 	 expect(result).to eq "iqqf dqqm"
   end
 
+  it 'should wrap from z to a' do
+	 string = Caesar.new
+	 result = string.translate_to_string("jazz", 4)
+	 expect(result).to eq "nedd"
+  end
 
 
 
