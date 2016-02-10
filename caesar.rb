@@ -11,8 +11,13 @@ class Caesar
 	 new_letters = []
 	 alphabet = %w(a b c d e f g h i j k l m n o p q r s t u v w x y z)
 	 new_indices.each do |new_index|
-		unless new_index == " " 
+		unless new_index == " "
+		if new_index > 25
+		  new_index = new_index - alphabet.length.to_i
 		  new_index = alphabet[new_index]
+		else
+		  new_index = alphabet[new_index]
+		end
 		end
 		new_letters << new_index
 	 end
