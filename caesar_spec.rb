@@ -74,6 +74,11 @@ describe Caesar do
 	 expect(result).to eq "nedd"
   end
 
+  it 'should correctly translate all letters in the alphabet within a sentence' do
+	string = Caesar.new
+	result = string.translate_to_string("the quick brown fox jumped over the lazy dog", 1)
+	expect(result).to eq "uif rvjdl cspxo gpy kvnqfe pwfs uif mbaz eph"
+  end
 
 
 
