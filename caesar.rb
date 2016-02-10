@@ -11,7 +11,7 @@ class Caesar
 	 new_letters = []
 	 alphabet = %w(a b c d e f g h i j k l m n o p q r s t u v w x y z)
 	 new_indices.each do |new_index|
-		unless new_index == nil
+		unless new_index == " " 
 		  new_index = alphabet[new_index]
 		end
 		new_letters << new_index
@@ -22,7 +22,7 @@ class Caesar
 	 indices = find_indices(input_string)
 	 new_indices = []
 	 indices.each do |index|
-		unless index == nil
+		unless index == " " 
 		  index += shift_number
 		end
 		new_indices << index
@@ -35,7 +35,10 @@ class Caesar
 	 indices = []
 	 alphabet = %w(a b c d e f g h i j k l m n o p q r s t u v w x y z)
 	 letters.each do |letter|
-		indices << alphabet.index(letter)
+		unless letter == " "
+		  letter = alphabet.index(letter)
+		end
+		indices << letter
 	 end
 		indices
   end
