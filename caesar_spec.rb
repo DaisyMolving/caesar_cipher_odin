@@ -61,6 +61,11 @@ describe Caesar do
 	 expect(result).to eq [nil]
 	end
 
+  it 'should allow spaces to remain unchanged before joining' do
+	 string = Caesar.new
+	 result = string.convert_letters("good book", 2)
+	 expect(result).to eq ["i", "q", "q", "f", nil, "d", "q", "q", "m"]
+  end
 
 
 
