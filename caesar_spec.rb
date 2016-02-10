@@ -18,5 +18,11 @@ describe Caesar do
 	 result = string.find_indices("good")
 	 expect(result).to eq [6, 14, 14, 3]
   end
+
+  it 'should replace "book" with [1, 14, 14, 10]' do
+	 string = Caesar.new
+	 result = string.find_indices("book")
+	 expect(result).to eq [1, 14, 14, 10]
+  end
 end
 
