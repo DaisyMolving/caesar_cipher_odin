@@ -55,7 +55,11 @@ describe Caesar do
 	 expect(result).to eq "gttp"
   end
 
-
+  it 'should allow spaces to remain unchanged' do
+	 string = Caesar.new
+	 result = string.find_indices(" ")
+	 expect(result).to eq [nil]
+	end
 
 
 
