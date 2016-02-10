@@ -30,5 +30,11 @@ describe Caesar do
 	 result = string.shift_indices("book", 2)
 	 expect(result).to eq [3, 16, 16, 12]
   end
+
+  it 'should increase each index of "good" by amount of shift_number' do
+	 string = Caesar.new
+	 result = string.shift_indices("good", 3)
+	 expect(result).to eq [9, 17, 17, 6]
+  end
 end
 
