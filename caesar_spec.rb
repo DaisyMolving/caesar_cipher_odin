@@ -36,5 +36,19 @@ describe Caesar do
 	 result = string.shift_indices("good", 3)
 	 expect(result).to eq [9, 17, 17, 6]
   end
+
+  it 'should take the letters in alphabet at those new index positions' do
+	 string = Caesar.new
+	 result = string.convert_letters("good", 3)
+	 expect(result).to eq ["j", "r", "r", "g"]
+  end
+
+
+
+
+
+
+
+
 end
 

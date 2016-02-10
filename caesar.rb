@@ -1,5 +1,14 @@
 class Caesar
 
+  def convert_letters(input_string, shift_number)
+	 new_indices = shift_indices(input_string, shift_number)
+	 new_letters = []
+	 alphabet = %w(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+	 new_indices.each do |new_index|
+		new_letters << alphabet[new_index]
+	 end
+	 new_letters
+  end
   def shift_indices(input_string, shift_number)
 	 indices = find_indices(input_string)
 	 new_indices = []
