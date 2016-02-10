@@ -1,5 +1,11 @@
 class Caesar
 
+  def translate_to_string(input_string, shift_number)
+	 new_letters = convert_letters(input_string, shift_number)
+	 translation = new_letters.join
+	 translation
+  end
+  
   def convert_letters(input_string, shift_number)
 	 new_indices = shift_indices(input_string, shift_number)
 	 new_letters = []
